@@ -23,6 +23,9 @@ te_sub2<-te_sub[,-c(1,3,4,5,6,7,60)]
 set.seed(123)
 boostFit <- train(classe ~ ., method = "gbm", data = tr_sub2, verbose = F, trControl = trainControl(method = "cv", number = 10))
 
+# set.seed(123)
+# rfFit <- train(classe ~ ., method = "rf", data = tr_sub2, importance = T, trControl = trainControl(method = "cv", number = 10))
+
 tr_predict<-predict(boostFit,newdata = tr_sub2)
 confusionMatrix(tr_predict,tr_sub2$classe)
 
