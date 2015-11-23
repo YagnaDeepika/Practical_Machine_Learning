@@ -46,7 +46,7 @@ plot(boostFit, ylim = c(0.8, 1))
 ```
 
 The boosting algorithm generated a good model with accuracy = 0.9719
-The expected out of sample error is `r 1-mean(boostFit$resample$Accuracy)`
+The expected out of sample error is 0.04
 
 ##Final Model and Prediction
 
